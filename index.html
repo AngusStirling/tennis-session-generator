@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Session Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <p class="eyebrow">Coaching toolkit</p>
+            <h1>Tennis Session Generator</h1>
+            <p>Create a focused tennis coaching session in one click.</p>
+        </header>
+        <section class="generator" aria-label="Session generator">
+            <label class="choice" for="player-age">
+                Player age
+                <select id="player-age">
+                    <option value="3-5">3-5</option>
+                    <option value="6-8">6-8</option>
+                    <option value="9-11">9-11</option>
+                    <option value="12-15">12-15</option>
+                    <option value="16-17">16-17</option>
+                    <option value="18-plus">18+</option>
+                </select>
+            </label>
+            <label class="choice" for="player-level">
+                Player level
+                <select id="player-level">
+                    <option value="beginner">Beginner</option>
+                </select>
+            </label>
+            <button onclick="generateSession()">Generate Session</button>
+            <p id="session" aria-live="polite"></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
