@@ -1,3 +1,5 @@
+        import { levelOptions, sessions, sessionTimings } from "./data.js";
+
         const previousChoices = {};
 
         function chooseRandom(options, choiceName) {
@@ -53,4 +55,5 @@
         }
 
         document.getElementById("player-age").addEventListener("change", updateLevelOptions);
+        document.getElementById("generate-session").addEventListener("click", generateSession);
         updateLevelOptions();

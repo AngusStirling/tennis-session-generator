@@ -1,4 +1,4 @@
-const levelOptions = {
+export const levelOptions = {
             "3-5": ["beginner"],
             "6-8": ["beginner", "intermediate"],
             "9-11": ["beginner", "intermediate"],
@@ -7,7 +7,7 @@ const levelOptions = {
             "18-plus": ["beginner", "intermediate", "advanced"]
         };
         
-        const sessions = {
+        export const sessions = {
             "3-5": {
                 beginner: {
                     warmUps: ["5 minutes of skipping, side steps, and fun shadow swings.", "Play follow-the-leader movements, then gently bounce and catch the ball.", "Move like different animals around the court, finishing with easy racket taps."] ,
@@ -106,7 +106,7 @@ const levelOptions = {
             }
         };
 
-        const sessionTimings = {
+        export const sessionTimings = {
             "30": { warmUp: 5, miniTennis: 5, mainSession: 20 },
             "45": { warmUp: 5, miniTennis: 10, mainSession: 30 },
             "60": { warmUp: 10, miniTennis: 10, mainSession: 40 },
