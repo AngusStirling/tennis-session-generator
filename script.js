@@ -106,6 +106,13 @@
             }
         };
 
+        const sessionTimings = {
+            "30": { warmUp: 5, miniTennis: 5, mainSession: 20 },
+            "45": { warmUp: 5, miniTennis: 10, mainSession: 30 },
+            "60": { warmUp: 10, miniTennis: 10, mainSession: 40 },
+            "90": { warmUp: 15, miniTennis: 15, mainSession: 60 }
+        };
+
         const previousChoices = {};
 
         function chooseRandom(options, choiceName) {
@@ -138,6 +145,7 @@
             const selectedAge = document.getElementById("player-age").value;
             const selectedLevel = document.getElementById("player-level").value;
             const selectedDuration = document.getElementById("session-duration").value;
+            const timings = sessionTimings[selectedDuration];
             const session = sessions[selectedAge][selectedLevel];
             const sessionKey = selectedAge + "-" + selectedLevel;
             const warmUp = chooseRandom(session.warmUps, sessionKey + "-warm-up");
@@ -148,13 +156,13 @@
             document.getElementById("session").innerHTML = `
                 <h2>${selectedAge.replace("-plus", "+")} ${selectedLevel.charAt(0).toUpperCase() + selectedLevel.slice(1)} Session</h2>
                 <p><strong>Duration:</strong> ${selectedDuration} minutes</p>
-                <h3>1. Warm Up</h3>
+                <h3>1. Warm Up (${timings.warmUp} minutes)</h3>
                 <p>${warmUp}</p>
-                <h3>2. Mini Tennis</h3>
+                <h3>2. Mini Tennis (${timings.miniTennis} minutes)</h3>
                 <p>${miniTennis}</p>
-                <h3>3. Main Session</h3>
+                <h3>3. Main Session (${timings.mainSession} minutes)</h3>
                 <p>${mainSession}</p>
-                <h3>4. Coach's Notes</h3>
+                <h3>4. Coach's Notes / Wrap Up</h3>
                 <ul><li>${coachNotes}</li></ul>
             `;
         }
