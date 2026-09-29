@@ -137,6 +137,7 @@
         function generateSession() {
             const selectedAge = document.getElementById("player-age").value;
             const selectedLevel = document.getElementById("player-level").value;
+            const selectedDuration = document.getElementById("session-duration").value;
             const session = sessions[selectedAge][selectedLevel];
             const sessionKey = selectedAge + "-" + selectedLevel;
             const warmUp = chooseRandom(session.warmUps, sessionKey + "-warm-up");
@@ -146,6 +147,7 @@
 
             document.getElementById("session").innerHTML = `
                 <h2>${selectedAge.replace("-plus", "+")} ${selectedLevel.charAt(0).toUpperCase() + selectedLevel.slice(1)} Session</h2>
+                <p><strong>Duration:</strong> ${selectedDuration} minutes</p>
                 <h3>1. Warm Up</h3>
                 <p>${warmUp}</p>
                 <h3>2. Mini Tennis</h3>
