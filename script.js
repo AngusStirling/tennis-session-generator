@@ -33,12 +33,25 @@
             const selectedLevel = document.getElementById("player-level").value;
             const selectedDuration = document.getElementById("session-duration").value;
             const timings = sessionTimings[selectedDuration];
+
+            if (!timings) {
+                console.error("session timings data not found");
+                document.getElementById("session").innerText=
+                "sorry this session could not be generated, please try again later or select a different option"
+                return;
+                    }
+
             const session = sessions[selectedAge][selectedLevel];
 
             if (!session) {
                 console.error("Session data not found");
+                document.getElementById("session").innerText=
+                "sorry this session could not be generated, please try again later or select a different option"
                 return;
             }
+     
+     
+     
             const sessionKey = selectedAge + "-" + selectedLevel;
             const warmUp = chooseRandom(session.warmUps, sessionKey + "-warm-up");
             const miniTennis = chooseRandom(session.miniTennis, sessionKey + "-mini-tennis");
