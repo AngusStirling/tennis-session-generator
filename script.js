@@ -28,29 +28,34 @@
             });
         }
 
+
+function showSessionError(message) {
+    console.error(message);
+    document.getElementById("session").innerText =
+    "sorry this session could not be generated, please try again later or select a different option"; 
+
+}
         function generateSession() {
             const selectedAge = document.getElementById("player-age").value;
             const selectedLevel = document.getElementById("player-level").value;
             const selectedDuration = document.getElementById("session-duration").value;
+            
+            if (!selectedAge || !selectedLevel || !selectedDuration) {
+                showSessionError("Missing session input");
+                return;
+            }
             const timings = sessionTimings[selectedDuration];
 
             if (!timings) {
-                console.error("session timings data not found");
-                document.getElementById("session").innerText=
-                "sorry this session could not be generated, please try again later or select a different option"
+                showSessionError("Session timings data not found");
                 return;
-                    }
-
+            }
             const session = sessions[selectedAge][selectedLevel];
 
             if (!session) {
-                console.error("Session data not found");
-                document.getElementById("session").innerText=
-                "sorry this session could not be generated, please try again later or select a different option"
+                showSessionError("Session data not found");
                 return;
             }
-     
-     
      
             const sessionKey = selectedAge + "-" + selectedLevel;
             const warmUp = chooseRandom(session.warmUps, sessionKey + "-warm-up");
