@@ -34,6 +34,11 @@
             const selectedDuration = document.getElementById("session-duration").value;
             const timings = sessionTimings[selectedDuration];
             const session = sessions[selectedAge][selectedLevel];
+
+            if (!session) {
+                console.error("Session data not found");
+                return;
+            }
             const sessionKey = selectedAge + "-" + selectedLevel;
             const warmUp = chooseRandom(session.warmUps, sessionKey + "-warm-up");
             const miniTennis = chooseRandom(session.miniTennis, sessionKey + "-mini-tennis");
