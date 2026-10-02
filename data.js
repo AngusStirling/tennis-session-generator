@@ -112,3 +112,116 @@ export const levelOptions = {
             "60": { warmUp: 10, miniTennis: 10, mainSession: 40 },
             "90": { warmUp: 15, miniTennis: 15, mainSession: 60 }
         };
+
+        export const focusContent = {
+            Forehand: {
+                warmUpAdditions: [
+                    "Add trunk rotations, then take lateral steps while rehearsing a balanced forehand swing.",
+                    "Use side steps with controlled trunk rotation, followed by slow forehand shadow swings.",
+                    "Practise lateral movement and rotate through the hips before each shadow forehand."
+                ],
+                miniTennis: [
+                    "Play cooperative service-box rallies using forehands, aiming for a relaxed contact point in front.",
+                    "Rally in the service boxes and guide forehands cross-court with a smooth low-to-high swing.",
+                    "Keep a mini-tennis rally going with forehands, focusing on balance and a controlled finish."
+                ],
+                mainSessions: [
+                    "Feed forehands to cross-court and down-the-line targets, recovering to the middle after each shot.",
+                    "Build a forehand pattern: rally cross-court, move around a short ball, then attack to a target.",
+                    "Practise forehand depth with alternating feeds, then play points where the first attacking shot must be a forehand."
+                ],
+                coachNotes: [
+                    "Prepare early with a shoulder turn; contact the ball in front and finish balanced toward the target.",
+                    "Encourage a relaxed grip and smooth low-to-high swing. Prioritise depth and shape before power.",
+                    "Watch the spacing to the ball. Use small adjustment steps and recover after each forehand."
+                ]
+            },
+            Backhand: {
+                warmUpAdditions: [
+                    "Add gentle trunk rotations and lateral loading, then rehearse a balanced shadow backhand.",
+                    "Use side steps and shoulder turns to prepare both sides before slow backhand swings.",
+                    "Practise lateral weight shifts with relaxed shoulder preparation and controlled backhand shadows."
+                ],
+                miniTennis: [
+                    "Rally cooperatively inside the service boxes using backhands and a steady contact point in front.",
+                    "Keep a backhand mini-tennis rally going, aiming cross-court with control and good balance.",
+                    "Use gentle backhands in the service boxes, focusing on early preparation between shots."
+                ],
+                mainSessions: [
+                    "Feed backhands to cross-court targets, then add a controlled change down the line after three rallies.",
+                    "Practise backhand depth from alternating feeds, recovering to a balanced ready position each time.",
+                    "Build a backhand rally pattern with cross-court consistency, then attack a short ball to a target."
+                ],
+                coachNotes: [
+                    "Turn the shoulders early and organise the hands before the bounce; make contact in front.",
+                    "Load through the outside leg, transfer forward, and finish in balance without forcing the swing.",
+                    "Cue a stable head and smooth acceleration. Adjust grip and preparation to suit one- or two-handed backhands."
+                ]
+            },
+            Serve: {
+                warmUpAdditions: [
+                    "Add gentle shoulder rotations and arm circles, then practise comfortable overhead reaches.",
+                    "Use arm circles and shoulder mobility, followed by relaxed shadow service motions.",
+                    "Prepare with controlled overhead reaches and shoulder rotations before rehearsing the service motion."
+                ],
+                miniTennis: [
+                    "Play relaxed service-box rallies, pausing between points to rehearse a consistent service toss.",
+                    "Keep a cooperative mini-tennis rally going, then practise the service toss without rushing.",
+                    "Use gentle service-box rallies to practise rhythm and a balanced ready position before serving."
+                ],
+                mainSessions: [
+                    "Practise the service toss to a consistent contact point, then hit sets of serves to wide and body targets.",
+                    "Build the serve in stages: toss and catch, shadow the full motion, then serve to marked target zones.",
+                    "Work on first-serve placement and a reliable second serve, recording target hits over repeated sets."
+                ],
+                coachNotes: [
+                    "Keep the tossing arm extended and release the ball consistently in front of the hitting shoulder.",
+                    "Use a relaxed arm and smooth leg drive; avoid forcing shoulder rotation or serving through discomfort.",
+                    "Coach rhythm from the ground up: balanced stance, repeatable toss, full reach, and controlled landing."
+                ]
+            },
+            Movement: {
+                warmUpAdditions: [
+                    "Add split-step reactions, side steps, and short accelerations followed by controlled stops.",
+                    "Practise lateral shuffles, a quick split step, and smooth acceleration and deceleration.",
+                    "Move between cones with side steps, reacting to a signal and stopping in a balanced stance."
+                ],
+                miniTennis: [
+                    "Rally inside the service boxes and recover to the middle after each shot using small adjustment steps.",
+                    "Keep a cooperative mini-tennis rally going while moving laterally between shots and resetting your stance.",
+                    "Play service-box rallies with a split step before each feed and balanced recovery after contact."
+                ],
+                mainSessions: [
+                    "React to alternating wide feeds, split-step before each feed, and recover to the middle after the shot.",
+                    "Use a side-to-side movement pattern: accelerate to the ball, hit to a target, then decelerate under control.",
+                    "Play movement points where the coach varies direction and depth; score balanced recovery as well as the shot."
+                ],
+                coachNotes: [
+                    "Time the split step as the opponent strikes, then push off in the direction of the ball.",
+                    "Encourage small adjustment steps near contact and a controlled stop before swinging.",
+                    "Prioritise efficient recovery and balance; increase speed only while footwork stays controlled."
+                ]
+            },
+            "Match Play": {
+                warmUpAdditions: [
+                    "Add partner reaction movement, a split step on a signal, and a controlled change of direction.",
+                    "React to a coach's call with a split step, two quick movement steps, and a balanced stop.",
+                    "Practise short reaction starts and changes of direction, resetting with a ready-position split step."
+                ],
+                miniTennis: [
+                    "Play service-box points to five, using a split step before each shot and choosing safe targets.",
+                    "Rally in the service boxes, then play short points that reward a clear target and quick recovery.",
+                    "Use mini-tennis points with a serve-start routine and a reset to ready position after each rally."
+                ],
+                mainSessions: [
+                    "Play points starting with a coach feed; identify a safe cross-court pattern before looking to attack.",
+                    "Use situational points: defend a wide ball, recover, then build toward the open court.",
+                    "Play tie-break style games with a tactical goal for each point, then review the decision after the rally."
+                ],
+                coachNotes: [
+                    "Before each point, choose a simple first-shot plan and return to a ready position after the serve or return.",
+                    "Reward good decisions and recovery, not only winners. Ask what space opened up during the rally.",
+                    "Use the split step as the opponent makes contact, watch the ball, and commit to a clear target under pressure."
+                ]
+            }
+        };

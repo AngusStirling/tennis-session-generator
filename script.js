@@ -1,4 +1,4 @@
-        import { levelOptions, sessions, sessionTimings } from "./data.js";
+        import { levelOptions, sessions, sessionTimings, focusContent } from "./data.js";
 
         const previousChoices = {};
 
@@ -39,8 +39,9 @@ function showSessionError(message) {
             const selectedAge = document.getElementById("player-age").value;
             const selectedLevel = document.getElementById("player-level").value;
             const selectedDuration = document.getElementById("session-duration").value;
+            const selectedFocus = document.getElementById("session-focus").value;
             
-            if (!selectedAge || !selectedLevel || !selectedDuration) {
+            if (!selectedAge || !selectedLevel || !selectedDuration || !selectedFocus) {
                 showSessionError("Missing session input");
                 return;
             }
@@ -56,18 +57,28 @@ function showSessionError(message) {
                 showSessionError("Session data not found");
                 return;
             }
+
+            const focus = focusContent[selectedFocus];
+
+            if (!focus) {
+                showSessionError("Focus data not found");
+                return;
+            }
      
             const sessionKey = selectedAge + "-" + selectedLevel;
             const warmUp = chooseRandom(session.warmUps, sessionKey + "-warm-up");
-            const miniTennis = chooseRandom(session.miniTennis, sessionKey + "-mini-tennis");
-            const mainSession = chooseRandom(session.mainSessions, sessionKey + "-main-session");
-            const coachNotes = chooseRandom(session.notes, sessionKey + "-coach-notes");
+            const focusKey = sessionKey + "-" + selectedFocus;
+            const warmUpAddition = chooseRandom(focus.warmUpAdditions, focusKey + "-warm-up-addition");
+            const miniTennis = chooseRandom(focus.miniTennis, focusKey + "-mini-tennis");
+            const mainSession = chooseRandom(focus.mainSessions, focusKey + "-main-session");
+            const coachNotes = chooseRandom(focus.coachNotes, focusKey + "-coach-notes");
 
             document.getElementById("session").innerHTML = `
                 <h2>${selectedAge.replace("-plus", "+")} ${selectedLevel.charAt(0).toUpperCase() + selectedLevel.slice(1)} Session</h2>
                 <p><strong>Duration:</strong> ${selectedDuration} minutes</p>
+                <p><strong>Focus:</strong> ${selectedFocus}</p>
                 <h3>1. Warm Up (${timings.warmUp} minutes)</h3>
-                <p>${warmUp}</p>
+                <p>${warmUp} ${warmUpAddition}</p>
                 <h3>2. Mini Tennis (${timings.miniTennis} minutes)</h3>
                 <p>${miniTennis}</p>
                 <h3>3. Main Session (${timings.mainSession} minutes)</h3>
